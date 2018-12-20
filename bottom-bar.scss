@@ -1,0 +1,29 @@
+.bottom-bar {
+  // Position
+  position: fixed;
+  bottom: 0;
+
+  // Change if you don't want full width
+  left: 0;
+  right: 0;
+
+  /*
+   * Ensure visibility over other elements
+   * (may not be necessary, or may have to be greater, depending on the page content)
+   */
+  z-index: 1;
+
+  // Unless visible, move just below the screen
+  transform: translate(0, 100%);
+
+  // Transition effect for showing/hiding
+  transition: transform 0.3s;
+
+  &--visible {
+    // Move back into base position
+    transform: translate(0, 0);
+  }
+
+  // Any background you like
+  background-color: #fff;
+}
